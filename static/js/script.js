@@ -46,6 +46,23 @@ document.addEventListener("DOMContentLoaded", function () {
 let darkMode = localStorage.getItem("darkMode");
 const darkModeToggle = document.querySelectorAll("#dark-mode-toggle");
 
+// Taken from : https://stackoverflow.com/a/68824350
+function toggleNoticeElementDarkMode() {
+  if (document.documentElement.classList.contains("light")) {
+    document.documentElement.classList.remove("light")
+    document.documentElement.classList.add("dark")
+  } else if (document.documentElement.classList.contains("dark")) {
+    document.documentElement.classList.remove("dark")
+    document.documentElement.classList.add("light")
+  } else {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.add("light")
+    }
+  }
+}
+
 const enableDarkMode = () => {
   document.body.classList.add("darkmode");
   localStorage.setItem("darkMode", "enabled");
@@ -76,6 +93,7 @@ darkModeToggle.forEach((toggle) => {
     } else {
       disableDarkMode();
     }
+    toggleNoticeElementDarkMode();
   });
 });
 
