@@ -224,3 +224,8 @@ main {
 .row {
   margin-left: 2rem;
 }
+
+/* Add consistent 4-space equivalent indentation for each nested level */
+ul ul, ul ol, ol ul, ol ol {
+    padding-left: 1em;
+}
