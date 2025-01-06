@@ -56,7 +56,7 @@ const disableDarkMode = () => {
   localStorage.setItem("darkMode", "disabled");
 };
 
-const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)");
 
 if (darkMode === "enabled") {
   enableDarkMode();
@@ -73,6 +73,11 @@ darkModeToggle.forEach((toggle) => {
       enableDarkMode();
     } else {
       disableDarkMode();
+    }
+
+    //dark theme preferred, set document with a `data-theme` attribute
+    if (darkMode === "enabled") {
+      document.documentElement.setAttribute("data-theme", "dark");
     }
   });
 });
