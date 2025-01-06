@@ -49,11 +49,13 @@ const darkModeToggle = document.querySelectorAll("#dark-mode-toggle");
 const enableDarkMode = () => {
   document.body.classList.add("darkmode");
   localStorage.setItem("darkMode", "enabled");
+  document.documentElement.setAttribute("data-theme", "dark");
 };
 
 const disableDarkMode = () => {
   document.body.classList.remove("darkmode");
   localStorage.setItem("darkMode", "disabled");
+  document.documentElement.setAttribute("data-theme", "light");
 };
 
 const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)");
@@ -73,11 +75,6 @@ darkModeToggle.forEach((toggle) => {
       enableDarkMode();
     } else {
       disableDarkMode();
-    }
-
-    //dark theme preferred, set document with a `data-theme` attribute
-    if (darkMode === "enabled") {
-      document.documentElement.setAttribute("data-theme", "dark");
     }
   });
 });
