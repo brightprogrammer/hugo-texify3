@@ -127,6 +127,7 @@
 }
 .katex * {
   -ms-high-contrast-adjust: none !important;
+  font-size: 0.955em !important;
 }
 .katex * {
   border-color: currentColor;
