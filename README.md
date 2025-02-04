@@ -1,5 +1,10 @@
 # TeXify3
 
+## Customizations
+
+- I've added a new id for images. When `icon-for-navbar-item` id is provided to an image tag, it's color
+will be inverted during theme toggle. This is important for images that are stored in a file.
+
 > A LaTeX-style hugo theme with the gruvbox color scheme for personal blogging
 
 [![Hugo](https://img.shields.io/badge/hugo-0.115.1-blue.svg)](https://gohugo.io)
