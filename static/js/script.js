@@ -67,12 +67,20 @@ const enableDarkMode = () => {
   document.body.classList.add("darkmode");
   localStorage.setItem("darkMode", "enabled");
   document.documentElement.setAttribute("data-theme", "dark");
+
+  // change navbar icons theme
+  const img = document.getElementById("icon-for-navbar-item");
+  img.style.filter = "invert(1)" ;
 };
 
 const disableDarkMode = () => {
   document.body.classList.remove("darkmode");
   localStorage.setItem("darkMode", "disabled");
   document.documentElement.setAttribute("data-theme", "light");
+  
+  // change navbar icons theme
+  const img = document.getElementById("icon-for-navbar-item");
+  img.style.filter = "invert(0)" ;
 };
 
 const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)");
