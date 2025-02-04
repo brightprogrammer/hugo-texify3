@@ -49,16 +49,19 @@ const darkModeToggle = document.querySelectorAll("#dark-mode-toggle");
 // Taken from : https://stackoverflow.com/a/68824350
 function toggleNoticeElementDarkMode() {
   if (document.documentElement.classList.contains("light")) {
-    document.documentElement.classList.remove("light")
-    document.documentElement.classList.add("dark")
+    document.documentElement.classList.remove("light");
+    document.documentElement.classList.add("dark");
   } else if (document.documentElement.classList.contains("dark")) {
-    document.documentElement.classList.remove("dark")
-    document.documentElement.classList.add("light")
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.add("light");
   } else {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.classList.add("dark")
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.add("light")
+      document.documentElement.classList.add("light");
     }
   }
 }
@@ -69,18 +72,20 @@ const enableDarkMode = () => {
   document.documentElement.setAttribute("data-theme", "dark");
 
   // change navbar icons theme
-  const img = document.getElementById("icon-for-navbar-item");
-  img.style.filter = "invert(1)" ;
+  document.querySelectorAll(".icon-for-navbar-item").forEach((img) => {
+    img.style.filter = "invert(1)";
+  });
 };
 
 const disableDarkMode = () => {
   document.body.classList.remove("darkmode");
   localStorage.setItem("darkMode", "disabled");
   document.documentElement.setAttribute("data-theme", "light");
-  
+
   // change navbar icons theme
-  const img = document.getElementById("icon-for-navbar-item");
-  img.style.filter = "invert(0)" ;
+  document.querySelectorAll(".icon-for-navbar-item").forEach((img) => {
+    img.style.filter = "invert(0)";
+  });
 };
 
 const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)");
@@ -109,6 +114,6 @@ darkModeToggle.forEach((toggle) => {
 var backToTopBtn = document.getElementById("back-to-top");
 
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
