@@ -73,7 +73,7 @@ const enableDarkMode = () => {
 
   // change navbar icons theme
   document.querySelectorAll(".icon-for-navbar-item").forEach((img) => {
-    img.style.filter = "invert(1)";
+    img.style.filter = "invert(80%) sepia(20%) saturate(200%) hue-rotate(10deg)";
   });
 };
 
@@ -84,7 +84,7 @@ const disableDarkMode = () => {
 
   // change navbar icons theme
   document.querySelectorAll(".icon-for-navbar-item").forEach((img) => {
-    img.style.filter = "invert(0)";
+    img.style.filter = "invert(10%) sepia(30%) saturate(120%) hue-rotate(-10deg)";
   });
 };
 
