@@ -1,9 +1,14 @@
 # TeXify3
 
-## Customizations
+Visit the [demo site](https://brightprogrammer.in).
+
+## Customizations/Fixes
 
 - I've added a new id for images. When `icon-for-navbar-item` id is provided to an image tag, it's color
 will be inverted during theme toggle. This is important for images that are stored in a file.
+- Katex rendering fixes
+    - Renderings like fractions got cropped out. Fixed that
+    - Equation numbers overlapped with rendered equations. Fixed that as well.
 
 > A LaTeX-style hugo theme with the gruvbox color scheme for personal blogging
 
@@ -26,8 +31,6 @@ will be inverted during theme toggle. This is important for images that are stor
 - [PostCSS](https://postcss.org/) to make writing CSS easier
 - Dark mode toggle
 - Citations
-
-Visit the [demo site](https://michaelneuper.github.io/hugo-texify3/).
 
 
 ![Lighthouse report](https://github.com/michaelneuper/hugo-texify3/assets/73108749/2bd66f9d-0c28-4ea5-acbc-d53e9078a2cd)
@@ -60,7 +63,7 @@ The following software inspires the design of this theme:
 
 If you want to support the development or say thanks, become a GitHub Sponsor or
 
-<a href="https://www.buymeacoffee.com/michaelneuper" target="_blank">
+<a href="https://www.buymeacoffee.com/brightprogrammer" target="_blank">
 <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png"
     alt="Buy Me A Coffee"
     height="41"
