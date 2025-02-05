@@ -1072,7 +1072,7 @@
   position: relative;
 }
 .katex-display > .katex > .katex-html > .tag {
-  position: absolute;
+  position: static;
   right: 0;
 }
 .katex-display.leqno > .katex > .katex-html > .tag {
@@ -1086,4 +1086,3 @@
 body {
   counter-reset: katexEqnNo mmlEqnNo;
 }
-.katex-display>.katex>.katex-html>.tag { position: static; float: right; }
