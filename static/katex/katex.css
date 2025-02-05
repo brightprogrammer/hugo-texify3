@@ -154,11 +154,13 @@
 }
 .katex .base {
   position: relative;
+  top: 4px;
   display: inline-block;
   white-space: nowrap;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  padding: 5px;
 }
 .katex .strut {
   display: inline-block;
@@ -1084,4 +1086,4 @@
 body {
   counter-reset: katexEqnNo mmlEqnNo;
 }
-
+.katex-display>.katex>.katex-html>.tag { position: static; float: right; }
