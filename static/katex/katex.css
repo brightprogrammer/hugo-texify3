@@ -121,13 +121,13 @@
 }
 .katex {
   font: normal 1.21em KaTeX_Main, Times New Roman, serif;
+  font-size: 1em !important;
   line-height: 1.2;
   text-indent: 0;
   text-rendering: auto;
 }
 .katex * {
   -ms-high-contrast-adjust: none !important;
-  font-size: 0.955em !important;
 }
 .katex * {
   border-color: currentColor;
