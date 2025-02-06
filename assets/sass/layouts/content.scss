@@ -251,37 +251,45 @@ button.copy-button {
   }
 }
 .toc.numbered-subtitles {
-  counter-reset: ul-h2;
+  counter-reset: ul-h1;
   li {
-    counter-reset: ul-h3;
+    counter-reset: ul-h2;
     &:before {
-      counter-increment: ul-h2;
-      content: counter(ul-h2) " ";
+      counter-increment: ul-h1;
+      content: counter(ul-h1) " ";
     }
     li {
-      counter-reset: ul-h4;
+      counter-reset: ul-h3;
       &:before {
-        counter-increment: ul-h3;
-        content: counter(ul-h2) "." counter(ul-h3) " ";
+        counter-increment: ul-h2;
+        content: counter(ul-h1) "." counter(ul-h2) " ";
       }
       li {
-        counter-reset: ul-h5;
+        counter-reset: ul-h4;
         &:before {
-          counter-increment: ul-h4;
-          content: counter(ul-h2) "." counter(ul-h3) "." counter(ul-h4) " ";
+          counter-increment: ul-h3;
+          content: counter(ul-h1) "." counter(ul-h2) "." counter(ul-h3) " ";
         }
         li {
-          counter-reset: ul-h6;
+          counter-reset: ul-h5;
           &:before {
-            counter-increment: ul-h5;
-            content: counter(ul-h2) "." counter(ul-h3) "." counter(ul-h4) "."
-              counter(ul-h5) " ";
+            counter-increment: ul-h4;
+            content: counter(ul-h1) "." counter(ul-h2) "." counter(ul-h3) "."
+              counter(ul-h4) " ";
           }
           li {
+            counter-reset: ul-h6;
             &:before {
-              counter-increment: ul-h6;
-              content: counter(ul-h2) "." counter(ul-h3) "." counter(ul-h4) "."
-                counter(ul-h5) "." counter(ul-h6) " ";
+              counter-increment: ul-h5;
+              content: counter(ul-h1) "." counter(ul-h2) "." counter(ul-h3) "."
+                counter(ul-h4) "." counter(ul-h5) " ";
+            }
+            li {
+              &:before {
+                counter-increment: ul-h6;
+                content: counter(ul-h1) "." counter(ul-h2) "." counter(ul-h3) "."
+                  counter(ul-h4) "." counter(ul-h5) "." counter(ul-h6) " ";
+              }
             }
           }
         }
